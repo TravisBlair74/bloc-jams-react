@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 .App {
   text-align: center;
 }
@@ -9,9 +13,15 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 40px;
+  padding: 45px;
   color: white;
+}
+
+.App-header .Links {
+   display: inline-block;
+   padding-right: 15px;
+   padding-left: 15px;
 }
 
 .App-title {
@@ -25,4 +35,107 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto 150px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#album-info {
+  overflow: hidden;
+}
+
+#album-cover-art {
+  float: left;
+  margin-right: 2rem;
+  position: relative;
+  width: 200px;
+  max-width: 33%;
+}
+
+#album-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2.artist {
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  opacity: 0.9;
+}
+
+#release-info {
+  font-size: 0.8rem;
+}
+
+.library img {
+  width: 400px;
+  max-width: 50%;
+}
+
+#song-list {
+  border-collapse: collapse;
+  clear: both;
+  font-weight: 100;
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+#song-duration-column {
+  width: 80px;
+}
+
+tr {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.8);
+}
+
+.player-bar {
+  background: hsla(0, 0%, 0%, 0.1);
+  max-width: 800px;
+  bottom: 0;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+}
+
+#buttons {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.hidden-number {
+  display: none;
+}
+
+#time-control {
+  margin: 0.5rem auto;
+  width: 50%;
+}
+
+#volume-control div {
+  font-size: 0.9rem;
+  width: 20px;
+}
+
+#volume-control {
+  transform: translateY(-50%);
+  top: 66%;
+  position: absolute;
+  right: 2rem;
+  width: 15%;
+}
+
+#volume-control input {
+  float: left;
+  width: calc(100% - 40px);
 }

@@ -45,6 +45,7 @@ class Album extends Component {
    play() {
      this.audioElement.play();
      this.setState({ isPlaying: true });
+     this.audioElement.className='isPlaying';
    }
 
    formatTime(time) {
@@ -123,14 +124,13 @@ class Album extends Component {
             {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
-                  <button>
-                    <span className="song-number">{index+1}</span>
-                    <span className="ion-play"></span>
-                    <span className="ion-pause"></span>
+                  <button id="list-actions">
+                    <span className={this.state.isPlaying ? 'hidden-number' : 'song-number'}>{index+1}</span>
+                    <span className={this.state.isPlaying ? 'ion-pause' : 'ion-play'}></span>
                   </button>
                 </td>
                 <td className="song-title">{song.title}</td>
-                <td className="song-duration">{song.duration}</td>
+                <td className="song-duration">{this.formatTime(song.duration)}</td>
               </tr>
             )
           }
